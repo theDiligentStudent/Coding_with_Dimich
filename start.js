@@ -8,17 +8,26 @@ function Start() {
 
     let buttonsClick = this;
 
-    this.buttonStart = document.querySelector('.buttons');
+    this.buttonStart1 = document.querySelector('#button_car_1');
+    this.buttonStart2 = document.querySelector('#button_car_2');
 
-    function onButtonClick(event) {
-        buttonsClick.onButtonStartClick(event);
+
+    function onButton1Click(event) {
+        buttonsClick.onButtonStart1Click(event);
+    }
+    function onButton2Click(event) {
+        buttonsClick.onButtonStart2Click(event);
     }
 
-    this.buttonStart.addEventListener('click', onButtonClick);
+    this.buttonStart1.addEventListener('click', onButton1Click);
+    this.buttonStart2.addEventListener('click', onButton2Click);
   };
 
-  this.onButtonStartClick = function () {
+  this.onButtonStart1Click = function () {
     window.alert('Hi');
+  }
+  this.onButtonStart2Click = function () {
+    window.alert('Hello');
   }
   
 }
