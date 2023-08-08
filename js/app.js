@@ -1,5 +1,6 @@
 // Начинаю заниматься по Новому JS-курсу Димыча "Переход на ООП"
 // 31/07/23          4/08/23         5/08/23      7/08/23
+    //  8/08/23
 
 function Car() {
   this.buttonStart = null;
@@ -23,14 +24,20 @@ Car.prototype.onButtonStartClick = function () {
   // window.alert('Hi');
   let fiftyFifty = Math.random();
   if(fiftyFifty > 0.5) {
-    alert('the car haved started');
+    alert('The car started up. The car drove off.');
   } else {
-    alert('Something Wrong');
+    alert('Something went wrong.');
   }
 };
 
-function innerHtml(evenObject) {
-  let getCurrentTarget = evenObject.currentTarget;
-  let getInner = getCurrentTarget.innerHtml;
-  tapStart(getInner);
-}
+
+
+
+
+        // Так - я попробовал сперва Сделать Сам то, что делает Димыч (с Машинами)
+        //     НО надо было делать Совсем По-Другому!!
+// function innerHtml(evenObject) {
+//   let getCurrentTarget = evenObject.currentTarget;
+//   let getInner = getCurrentTarget.innerHtml;
+//   tapStart(getInner);
+// }
