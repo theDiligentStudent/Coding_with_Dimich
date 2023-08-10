@@ -27,16 +27,18 @@ Car.prototype.onButtonStartClick = function () {
   // window.alert('Hi');
   let fiftyFifty = Math.random();
   if(fiftyFifty > 0.5) {
-    alert('The car started up. The car drove off.');
-    alert('waiting for an accident');
+    // Теперь -- так, как учит Димыч -- меняю все alert-ы на console.log
+    //   т.к. Димыч говорит, что Программеры всегда в таких случаях используют только console.log
+    console.log('The car started up. The car drove off.');
+    console.log('waiting for an accident');
     function carCrashed() {
-      alert('sudden engine stop');
+      console.log('sudden engine stop');
       }
         //  Две строчки Ниже -- две Равнозначные команды     поэтому одну из них я  закомментировал
       // window.setTimeout(carCrashed, 5000);
       setTimeout(carCrashed, 5000);
   } else {
-    alert('Something went wrong.');
+    console.log('Something went wrong.');
   }
 };
 
