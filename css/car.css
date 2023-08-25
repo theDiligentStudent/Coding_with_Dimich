@@ -5,3 +5,6 @@
   margin: 10px;
   padding: 10px;
 }
+.autos .hide {
+  display: none;
+}
