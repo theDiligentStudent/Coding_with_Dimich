@@ -2,6 +2,8 @@
 // 31/07/23          4/08/23         5/08/23      7/08/23
 //  8/08/23       10/08/23
 
+
+
 function Car() {
   this.buttonStart = null;
 }
@@ -30,24 +32,31 @@ Car.prototype.onButtonStartClick = function () {
     console.log('The car started up. The car drove off.');
 
     this.buttonStart.classList.add('hide');
+    // this.buttonStart.classList.remove('hide');
+  
     
-// this.buttonStart.disabled = true;    
-// Так, как было в курсе Димыча "ваще с нуля" --- здесь уже этот способ НЕ работает......
-
     function carCrashed() {
       console.log('sudden engine stop');
-      this.buttonStart.classList.remove('hide');
-
-
-      // this.buttonStart.disabled = false;  
     }
-    //  Две строчки Ниже -- две Равнозначные команды     поэтому одну из них я  закомментировал
-    // window.setTimeout(carCrashed, 5000);
     setTimeout(carCrashed, 5000);
 
-// this.buttonStart.disabled = false;     Так, как было в курсе Димыча "ваще с нуля" --- здесь уже этот способ НЕ работает......
 
-    // Переместил строчку К.-а ниже из положения Перед Ф.-ей setTimeout, поставил её Позади setTimeout.
+    // non-working function
+    // function tryAgain() {
+    //   console.log('You can try again');
+    // this.buttonStart.classList.remove('hide');
+    // }
+    // window.setTimeout(tryAgain, 8000);
+    
+
+    // (new) fully working feature
+    const tryAgain = () => {
+      console.log('You can try again');
+    this.buttonStart.classList.remove('hide');
+    }
+    window.setTimeout(tryAgain, 8000);
+
+
     console.log('waiting for an accident');
 
   } else {
